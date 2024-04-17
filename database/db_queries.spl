@@ -1,0 +1,58 @@
+DROP DATABASE IF EXISTS jdbc_course_db;
+
+CREATE DATABASE jdbc_course_db;
+
+USE jdbc_course_db;
+
+CREATE TABLE employee (
+    id INT(15) PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(30),
+    age INT,
+    gender TINYINT(1),
+    birth_date DATE,
+    salary DECIMAL(10, 2)
+);
+
+-- logup
+CREATE TABLE logup (
+    id INT(15) PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(30),
+    email VARCHAR(255), -- Adjusted length
+    password VARCHAR(30)
+);
+
+-- FORMS
+CREATE TABLE forms (
+    id INT(15) PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(255), -- Adjusted length
+    teacher VARCHAR(255), -- Adjusted length
+    times DECIMAL(10, 2) -- Adjusted type
+);
+
+-- STUDENT
+CREATE TABLE student (
+    id INT(15) PRIMARY KEY AUTO_INCREMENT,
+    Firstname VARCHAR(30),
+    Surname VARCHAR(30),
+    city VARCHAR(30),
+    fields VARCHAR(30),
+    age INT
+);
+
+-- Teachers
+CREATE TABLE teachers (
+    id INT(15) PRIMARY KEY AUTO_INCREMENT,
+    Firstname VARCHAR(30),
+    Surname VARCHAR(30),
+    city VARCHAR(100),
+    age INT
+);
+
+-- Modules
+CREATE TABLE modules (
+    id INT(15) PRIMARY KEY AUTO_INCREMENT,
+    NameOfModules VARCHAR(255),
+    formsOfModules1 VARCHAR(255),
+    formsOfModules2 VARCHAR(255),
+    formsOfModules3 VARCHAR(255)
+);
